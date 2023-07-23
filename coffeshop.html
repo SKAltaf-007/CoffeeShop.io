@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Cafe Coffee</h2>
+
+<p>Please Select your Drink:</p>
+
+<h2>Drink:</h2> 
+<select id="drink">
+
+<option value="0" id="0">Expresso</option>
+<option value="1" id="1">Cappuccino</option>
+<option value="2" id="2">Latte</option>
+
+</select>
+
+<br>
+<br>
+<h2>Add-ons:</h2>
+<select id="addons">
+<option value="0" id="0">Milk</option>
+<option value="1" id="1">Cream</option>
+<option value="2" id="2">Latte</option>
+
+</select>
+
+
+<br>
+<br>
+<button type="button" onclick="myFunction()">Submit</button>
+<br>
+<h3 id="demo"></h3>
+
+<br>
+<br>
+<button type="button" onclick="window.location.reload()" >Add more drinks</button>
+
+<h3 id="demo"></h3>
+
+<script>
+function myFunction() {
+ 
+  let x = document.getElementById("drink").value;
+  let y = document.getElementById("addons").value;
+  
+ 
+  if (x == 0 && y == 0) {
+    text = 60;
+  }else if(x == 0 && y == 1){
+  text = 75;
+  }else if(x == 0 && y == 2){
+  text = 100;
+  }else if(x == 1 && y == 0){
+  text = 80;
+  }else if(x == 1 && y == 1){
+  text = 90;
+  }else if(x == 1 && y == 2){
+  text = 125;
+  }else if(x == 2 && y == 0){
+  text = 100;
+  }else if(x == 2 && y == 1){
+  text = 125;
+  }else if(x == 2 && y == 2){
+  text = 150;
+  }
+  else {
+    text = "Please select a drink";
+  }
+  document.getElementById("demo").innerHTML = "Total Payment: "+text;
+
+ 
+}
+</script>
+
+</body>
+</html> 
